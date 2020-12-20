@@ -1,0 +1,224 @@
+.text_content_main{
+  display: grid;
+  grid-template-areas: "space planets solar";
+  grid-gap: 2vh;
+}
+
+.about_space{
+  border-radius: 2vh;
+  display: grid;
+  grid-area: space;
+  transition-duration: 0.5s;
+
+}
+
+.about_space:hover{
+  box-shadow: 0 0 1vh rgb(236, 75, 142);
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+.text_p{
+  padding-left: 1vh;
+  padding-right: 1vh;
+  text-align: justify;
+}
+
+.h2_main{
+  color: #cc43a3;
+  text-align: center;
+}
+
+.about_planet_sys{
+  border-radius: 2vh;
+  display: grid;
+  grid-area: planets;
+  transition-duration: 0.5s;
+  padding-bottom: 0.5vh;
+}
+
+.about_planet_sys:hover{
+  box-shadow: 0 0 1vh rgb(235, 77, 187);
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+.about_solar_sys{
+  border-radius: 2vh;
+  display: grid;
+  grid-area: solar;
+  transition-duration: 0.5s;
+}
+
+.about_solar_sys:hover{
+  box-shadow: 0 0 1vh rgb(238, 59, 199);
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+.inter_cos_h2{
+  color: #e745a9;
+  text-align: center;
+}
+
+h3{
+  color: #ee4ba4;
+  text-align: center;
+}
+
+.inter_cos{
+  display: grid;
+}
+
+.luna_inter_cos_img{
+  grid-area: luna_img;
+}
+
+.luna_inter_cos{
+  display: grid;
+  grid-template-areas: "luna_p luna_img";
+  grid-gap: 2vh;
+}
+
+.luna_inter_cos_p{
+  grid-area: luna_p;
+  padding-right: 20%;
+}
+
+.saturn_inter_cos_img{
+  grid-area: saturn_img;
+}
+
+.saturn_inter_cos{
+  justify-content: center;
+  display: grid;
+  grid-template-areas: "saturn_img saturn_p";
+  grid-gap: 2vh;
+}
+
+.saturn_inter_cos_p{
+  grid-area: saturn_p;
+  padding-left: 20%;
+}
+
+.mars_inter_cos_img{
+  grid-area: mars_img;
+}
+
+.mars_inter_cos{
+  display: grid;
+  grid-template-areas: "mars_p mars_img";
+  grid-gap: 2vh;
+}
+
+.mars_inter_cos_p{
+  grid-area: mars_p;
+  padding-right: 20%;
+}
+
+@media (max-width: 768px) {
+
+  .text_content_main{
+    display: grid;
+    grid-template-areas: "space" "planets" "solar";
+    grid-column-gap: 0;
+    grid-template-columns: repeat(3, 100%);
+    grid-row-gap: 2vh;
+  }
+
+  .about_space{
+    display: grid;
+    grid-area: space;
+
+  }
+
+  .about_planet_sys{
+    display: grid;
+    grid-area: planets;
+  }
+
+  .about_solar_sys{
+    display: grid;
+    grid-area: solar;
+  }
+
+}
+
+@media (max-width: 426px){
+
+  .inter_cos{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+
+  .luna_inter_cos_img{
+    display: flex;
+    grid-area: luna_img;
+    justify-content: center;
+  }
+
+  .saturn_inter_cos_img{
+    grid-area: saturn_img;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mars_inter_cos_img{
+    display: flex;
+    grid-area: mars_img;
+    justify-content: center;
+  }
+
+  .luna_inter_cos_img img{
+    width: 200px;
+    height: 100px;
+  }
+
+  .saturn_inter_cos_img img{
+    width: 120px;
+    height: 100px;
+  }
+
+  .mars_inter_cos_img img{
+    width: 120px;
+    height: 100px;
+  }
+
+  .luna_inter_cos{
+    display: grid;
+    grid-template-areas: "luna_p"
+    "luna_img";
+  }
+
+  .saturn_inter_cos{
+    justify-content: center;
+    display: grid;
+    grid-template-areas: "saturn_p" "saturn_img";
+    grid-gap: 0.5vh;
+  }
+
+  .mars_inter_cos{
+    display: grid;
+    grid-template-areas: "mars_p" "mars_img";
+    grid-gap: 0.5vh;
+    justify-content: center;
+  }
+
+  .luna_inter_cos_p{
+    padding-right: 0;
+    grid-area: luna_p;
+    text-align: center;
+  }
+
+  .saturn_inter_cos_p{
+    grid-area: saturn_p;
+    padding-left: 0;
+  }
+
+  .mars_inter_cos_p{
+    grid-area: mars_p;
+    padding-right: 0;
+  }
+
+}

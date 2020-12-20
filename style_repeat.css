@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+.header_of_main{
+  background-image: url(https://i.gifer.com/3xBO.gif);
+  background-size: 100%;
+  background-position: center;
+  color: #7e1960;
+  display: grid;
+  font-size: 200%;
+  height: 20%;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.wrapper_head{
+  top: 0;
+  width: 100%;
+}
+
+.wrapper_content{
+  margin-top: 2vh;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.wrapper_footer{
+  background-color: #bb3483;
+  bottom: 0;
+  height: 200px;
+  width: auto;
+  display: grid;
+  grid-template-areas: "copyright label contacts";
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 2vh;
+  padding: 30px;
+}
+
+body{
+  background:url(https://i.gifer.com/ZOHV.gif) ;
+  color: #d13ab0;
+  font-family: 'Russo One', sans-serif;
+  height: 100%;
+}
+
+img{
+  border-radius: 2px;
+}
+
+.whole_menu_div{
+  background: #bd278b;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.burger_bar{
+  display: none;
+}
+
+.menu_ul ul{
+  padding-inline-start: 1%;
+}
+
+.menu_ul li{
+  display: inline-block;
+  list-style: none;
+  margin-left: 10px;
+}
+
+.menu_ul a{
+  text-decoration: none;
+}
+
+.menu_link{
+  color: #eae3f2;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.menu_ul a:hover{
+  color: rgb(217, 23, 143);
+}
+
+.footer_p{
+  display: flex;
+  font-family: 'Modak', cursive;
+  text-transform: uppercase;
+  color: #ffffff;
+  grid-area: label;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.footer_p p{
+  font-size: 140%;
+}
+
+.footer_contacts{
+  color: rgb(255, 255, 255);
+  grid-area: contacts;
+}
+
+.footer_copyright{
+  text-align: justify;
+  padding-top: 10%;
+  color: rgb(59, 19, 97);
+  grid-area: copyright;
+  font-size: 80%;
+}
+
+.footer_contacts li{
+  list-style: none;
+  cursor: pointer;
+}
+
+.footer_contacts a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer_contacts a:hover{
+  color: rgb(209, 161, 215);
+  transition-duration: 0.5s;
+}
+
+.footer_contacts ul{
+  padding-inline-start: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  h1{
+    font-size: 90%;
+  }
+
+  .wrapper_content{
+    margin-top: 2vh;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .whole_menu_div{
+    text-align: center;
+    z-index: 3;
+    top: 0;
+    position: sticky;
+    display: grid;
+    grid-template-areas: "menu burger";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 40px;
+    width: 100%;
+  }
+
+  .menu_ul{
+    background-image: url(https://64.media.tumblr.com/4a0f21c52c4f20c28f9d47624ead1b76/3a34809c75a2c975-f6/s400x600/5c612e9476184ae36797b212fda4f7afeb05bce6.gif);
+    background-size: 200%;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: -100%;
+    transition-duration: 0.5s;
+    width: 100%;
+  }
+
+  .menu_ul ul{
+    padding-inline-start: 0;
+    text-align: center;
+  }
+
+  .menu_ul_list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .menu_ul li:first-child{
+    padding-top: 15%;
+  }
+
+  .menu_ul li{
+    display: grid;
+    grid: subgrid;
+    margin: 0 0 10% 0;
+  }
+
+  .menu_ul li:hover{
+    color: rgb(217, 23, 152);
+  }
+
+
+  .menu_link{
+    color: #c52e98;
+    font-size: 110%;
+  }
+
+  .burger_wrapper{
+    display: grid;
+    grid-area: burger;
+    height: 40px;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    width: 3em;
+  }
+
+  .burger_wrapper:hover{
+    cursor: pointer;
+  }
+
+  .burger_bar{
+    background-color: rgb(217, 23, 152);
+    display: block;
+    height: 3px;
+    position: relative;
+    top: 0.8em;
+    transition-duration: 0.5s;
+    width: 20px;
+  }
+
+  .burger_bar::before{
+    background-color: rgb(217, 23, 185);
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 0.5em;
+    transition-duration: 0.5s;
+    width: 20px;
+  }
+
+  .burger_bar::after{
+    background-color: rgb(217, 23, 185);
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 1em;
+    transition-duration: 0.5s;
+    width: 20px;
+  }
+
+  .burger_bar.open {
+  background-color: transparent;
+  transition-duration: 0.5s;
+}
+
+  .burger_bar.open::before{
+    content: '';
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+    top: 0.6em;
+  }
+
+  .burger_bar.open::after{
+    content: '';
+    top: 0.6em;
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+  }
+
+  .menu_ul.open{
+    top: 0;
+    transition-duration: 0.5s;
+  }
+
+  .wrapper_footer{
+    display: grid;
+    grid-template-areas:  "contacts" "copyr";
+    grid-template-rows: 60% 40%;
+    grid-template-columns: 1fr;
+  }
+
+  .footer_contacts{
+    grid-area: contacts;
+    padding: 0;
+    font-size: 90%;
+  }
+
+  .footer_p{
+    display: none;
+  }
+
+  .footer_copyright{
+    grid-area: copyr;
+    font-size: 60%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 447px){
+
+  .header_of_main{
+    font-size: 100%;
+  }
+  .menu_ul{
+    background-size: 300%;
+  }
+
+  h2{
+    font-size: 95%;
+  }
+
+  h3{
+    font-size: 95%;
+  }
+
+  div{
+    font-size: 90%;
+  }
+
+  p{
+    font-size: 90%;
+  }
+
+  .burger_bar{
+    background-color: rgb(217, 23, 169);
+    display: block;
+    height: 2.5px;
+    position: relative;
+    top: 1em;
+    transition-duration: 0.5s;
+    width: 20px;
+  }
+
+  .burger_bar::before{
+    background-color: rgb(217, 23, 169);
+    content: '';
+    height: 2.5px;
+    position: absolute;
+    right: 0;
+    top: 0.5em;
+    transition-duration: 0.5s;
+    width: 20px;
+  }
+
+  .burger_bar::after{
+    background-color: rgb(217, 23, 159);
+    content: '';
+    height: 2.5px;
+    position: absolute;
+    right: 0;
+    top: 1em;
+    transition-duration: 0.5s;
+    width: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px){
+  .menu_ul ul{
+    padding-inline-start: 0;
+  }
+
+}

@@ -1,0 +1,34 @@
+h3, h2{
+  text-align: center;
+}
+
+.iframe_video{
+  display: flex;
+  justify-content: center;
+}
+
+iframe{
+  width: 871px;
+  height: 490px;
+}
+
+@media (max-width: 1024px) {
+
+  iframe{
+    width: 731px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  iframe{
+    width: 611px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 425px) {
+  iframe{
+    height: 200px;
+  }
+}

@@ -1,0 +1,40 @@
+p{
+  text-align: justify;
+}
+
+.babyplanets_six_of_them{
+  display: grid;
+  grid-template-areas: "Ceres Pluto"
+   "Haumea Makemake"
+   "Erida Sedna";
+  grid-gap: 2.5vh;
+}
+
+img{
+  border-radius: 6px;
+  width: 300px;
+  height: 300px;
+}
+
+h3{
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .babyplanets_six_of_them{
+    display: grid;
+    grid-template-areas: "Ceres" "Pluto"
+     "Haumea" "Makemake"
+     "Erida" "Sedna";
+    grid-gap: 0;
+  }
+
+}
+
+@media (max-width: 505px) {
+  img{
+    width: 200px;
+    height: 200px;
+  }
+}

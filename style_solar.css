@@ -1,0 +1,181 @@
+h2, h3{
+  text-align: center;
+}
+
+.div_movement{
+  display: grid;
+  grid-template-areas: "div_movement_h2 div_movement_h2"
+  "Gelios Geo" "planets_solar_gif planets_solar_gif";
+  grid-template-columns: repeat(2, 1fr);
+  text-align: justify;
+  grid-gap: 2vh;
+  justify-content: center;
+  align-content: center;
+}
+
+.planets_solar_gif{
+  grid-area: planets_solar_gif;
+  display: flex;
+  justify-content: center;
+}
+
+.Gelios{
+  grid-area: Gelios;
+  transition-duration: 1s;
+  border-radius: 5px;
+  padding: 1vw;
+}
+
+.Geo{
+  border-radius: 5px;
+  grid-area: Geo;
+  transition-duration: 1s;
+  padding: 1vw;
+}
+
+.div_movement_h2{
+  grid-area: div_movement_h2;
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section .card{
+  width: 320px;
+  height: 320px;
+  margin: 10px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+section .card .box{
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s ease;
+}
+
+section .card:hover .box{
+  transform: rotateY(180deg);
+}
+
+section .card .box .imgBx{
+  width: 100%;
+  height: 100%;
+}
+
+section .card .box .imgBx img{
+  border-radius: 2px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img{
+  border-radius: 2px;
+}
+
+section .card .box .contentBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(184, 145, 238);
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+section .card .box .contentBx div{
+  transform-style: preserve-3d;
+  padding: 20px;
+  background: linear-gradient(45deg, rgb(95, 32, 139), rgb(200, 31, 188));
+  transform: translateZ(100px);
+}
+
+section .card .box .contentBx div h2{
+  color: white;
+  letter-spacing: 1px;
+}
+
+section .card .box .contentBx div p{
+  color: white;
+  letter-spacing: 1px;
+}
+
+.Geo:hover{
+  background-color: #c10915;
+  transition-duration: 1s;
+}
+
+.Gelios:hover{
+  background-color: #1ac109;
+  transition-duration: 1s;
+}
+
+
+@media (max-width: 768px) {
+
+  .planets_solar_gif img{
+    width: 500px;
+    height: 240px;
+  }
+
+  .div_movement{
+    display: grid;
+    grid-template-areas: "div_movement_h2"
+    "Gelios" "Geo" "planets_solar_gif";
+    grid-template-columns: 1fr;
+    grid-gap: 1vw;
+  }
+
+  .planets_solar_gif{
+    grid-area: planets_solar_gif;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Gelios{
+    grid-area: Gelios;
+    transition-duration: 1s;
+    border-radius: 5px;
+    padding: 1vw;
+  }
+
+  .Geo{
+    border-radius: 5px;
+    grid-area: Geo;
+    transition-duration: 1s;
+    padding: 1vw;
+  }
+
+  .div_movement_h2{
+    grid-area: div_movement_h2;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .planets_solar_gif img{
+    width: 400px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .planets_solar_gif img{
+    width: 290px;
+    height: 150px;
+  }
+}
